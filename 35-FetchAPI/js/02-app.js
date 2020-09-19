@@ -1,12 +1,13 @@
 const cargarJSONBtn = document.querySelector('#cargarJSON');
 cargarJSONBtn.addEventListener('click', obtenerDatos);
 
-function obtenerDatos(){
+function obtenerDatos() {
 
     const url = 'data/empleado.json';
-    fetch(url);
-    .then( respuesta => respuesta.json() )
-    .then( resultado => console.log(resultado) )
+
+    fetch(url)
+        .then(respuesta => respuesta.json())
+        .then( resultado => console.log(resultado) )
 }
 
 function mostrarHTML({empresa, id, nombre, trabajo}) {
